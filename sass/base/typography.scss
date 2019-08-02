@@ -1,0 +1,48 @@
+.heading-primary {
+
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: -.0625rem;
+  font-weight: bold;
+  margin: 0;
+  color: transparent;
+
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  -webkit-background-clip: text;
+
+  transition: all .2s;
+  text-align: center;
+
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  color: $color-white-dark;
+  //line-height: 3.2rem;
+  text-transform: uppercase;
+  //letter-spacing: -.0625rem;
+  font-weight: 900;
+  margin: 0;
+
+  &__guestion {
+    text-transform: none;
+  }
+
+
+  &__animation {
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+}
+
+.heading-tertiary {
+  color: $color-white-dark;
+  font-size: 1.5rem;
+  line-height: 3.2rem;
+
+
+  &__animation {
+    -webkit-animation: moveInRight 2s ease-out;
+  }
+}

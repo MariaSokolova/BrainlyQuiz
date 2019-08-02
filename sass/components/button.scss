@@ -1,0 +1,55 @@
+
+
+.btn {
+  display: inline-block;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 1rem;
+  padding: 1.5rem 4rem;
+  transition: all .2s;
+  //position: relative;
+  font-size: 1.2rem;
+
+
+  &--blue{
+    background-color: $color-primary-dark;
+    color: $color-white-dark;
+  }
+
+  &__start{
+    position: absolute;
+    //bottom: 2rem;
+    //right: 18rem;
+    float: left;
+  }
+
+  &__next{
+    position: absolute;
+    float: right;
+  }
+}
+
+#start{
+  visibility: visible;
+}
+
+#next{
+  visibility: hidden;
+}
+
+.button-container {
+  //display: flex;
+  //justify-content: center;
+
+  margin-top: 3rem;
+
+
+  //visibility: hidden;
+
+
+
+}
+
+

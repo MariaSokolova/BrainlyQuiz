@@ -29,6 +29,7 @@ const showErrorMessage = function () {
 
 const quizVisible = function () {
   startButton.removeEventListener("click", quizVisible);
+  startButton.style.visibility = 'hidden';
   nextButton.style.visibility = 'visible';
   getQuestions();
 };
@@ -43,13 +44,13 @@ const showCardQuestion = function(currentQuestion) {
 
   let answers = [];
   currentQuestion.answers.forEach(ans => {
-    answers.push(`<label class="sg-text-bit--dark">
-        <input type="radio" name="card" value="${ans.answer}">${ans.answer}</label><br/>`);
+    answers.push(`<label class="heading-tertiary">
+        <input type="radio" name="card" value="${ans.answer}">${ans.answer}</label>`);
   });
 
   output.push(
-    `<div class="question sg-text-bit--small">${currentQuestion.question}</div>
-        <div class="answers sg-text-bit--dark">${answers.join("")}</div>`
+    `<div class="question heading-secondary heading-secondary__guestion">${currentQuestion.question}</div>
+     <div class="answers heading-tertiary">${answers.join("")}</div>`
   );
 
   const card = document.getElementById('card');
@@ -97,7 +98,7 @@ const showResults = function() {
   nextButton.style.visibility = 'hidden';
   let output = [];
   output.push(
-    `<div class="question--result sg-text-bit--small">
+    `<div class="question--result heading-secondary__white">
         Number of questions: ${numberOfQuestions}<br/>
         Attempts: ${attempts}<br/>
         Incorrect: ${incorrectAnswers}
