@@ -106,7 +106,7 @@ body {
   height: available; }
 
 .question--result {
-  padding-top: 3rem; }
+  text-transform: none; }
 
 .answers {
   display: inline-flex;
@@ -125,6 +125,9 @@ body {
   height: 1.5rem;
   border: 0.1rem solid #3fb7ff;
   border-radius: 14px; }
+
+#hud {
+  visibility: visible; }
 
 .hud {
   display: flex;
