@@ -124,7 +124,7 @@ body {
   width: 15rem;
   height: 1.5rem;
   border: 0.1rem solid #3fb7ff;
-  border-radius: 12px; }
+  border-radius: 14px; }
 
 .hud {
   display: flex;
@@ -141,6 +141,12 @@ body {
   text-align: center;
   margin-top: 0;
   color: #1136f8; }
+
+.progress-bar-full {
+  height: 1.32rem;
+  background-color: #3fb7ff;
+  border-radius: 12px;
+  width: 0; }
 
 .site-header {
   margin: auto;

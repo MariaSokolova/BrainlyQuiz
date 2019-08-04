@@ -1,8 +1,11 @@
 const quizContainer = document.getElementById('card');
 const startButton = document.getElementById("start");
 const nextButton = document.getElementById("next");
+const progressText = document.getElementById('progressText');
+const scoreText = document.getElementById('score');
+
 let attempts = 0;
-let incorrectAnswers = 0;
+let correctAnswers = 0;
 let numberOfQuestions;
 
 let myQuestions;
@@ -67,11 +70,18 @@ const showNextSlide = function() {
 
   if (userAnswer) {
     attempts++;
+    progressText.innerHTML = `Question ${attempts} / ${numberOfQuestions}`;
+    //update progressBar
+      const progressBarFull = document.querySelector('.progress-bar-full');
+      progressBarFull.style.width = `${(attempts / numberOfQuestions) * 100}%`;
+
+
     const cardAnswers = myQuestions[0].answers;
     const current = cardAnswers.find((element) => element.answer === userAnswer);
 
-    if (!current.correct) {
-      incorrectAnswers++;
+    if (current.correct) {
+      correctAnswers++;
+      scoreText.innerText = `${correctAnswers}`;
     }
     isAnswerCorrect = current.correct;
   }

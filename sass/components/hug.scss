@@ -2,7 +2,7 @@
   width: 15rem;
   height: 1.5rem;
   border: .1rem solid $color-primary-light;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
 
@@ -26,5 +26,11 @@
   text-align: center;
   margin-top: 0;
   color: $color-primary-dark;
+}
 
+.progress-bar-full {
+  height: 1.32rem;
+  background-color: $color-primary-light;
+  border-radius: 12px;
+  width: 0;
 }
