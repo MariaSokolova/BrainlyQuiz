@@ -1,6 +1,6 @@
 .heading-primary {
 
-  font-size: 5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: -.0625rem;
   font-weight: bold;
@@ -13,19 +13,36 @@
   transition: all .2s;
   text-align: center;
 
+  @include atSmall {
+    font-size: 2.5rem;
+  }
+  @include atMedium {
+    font-size: 3.5rem;
+  }
+  @include atLarge {
+    font-size: 4.5rem;
+  }
+
 }
 
 .heading-secondary {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: $color-white-dark;
-  //line-height: 3.2rem;
   text-transform: uppercase;
-  //letter-spacing: -.0625rem;
   font-weight: 900;
   margin: 0;
 
+  @include atSmall {
+    font-size: 2rem;
+  }
+  @include atMedium {
+    font-size: 2rem;
+  }
+
+
   &__guestion {
     text-transform: none;
+    font-weight: normal;
   }
 
 
@@ -38,11 +55,27 @@
 
 .heading-tertiary {
   color: $color-white-dark;
-  font-size: 1.5rem;
-  line-height: 3.2rem;
+  font-size: 1rem;
+  line-height: 2.2rem;
+
+
+  @include atMedium {
+    font-size: 1.5rem;
+    line-height: 3.2rem;
+  }
+  //@include atMedium {
+  //  font-size: 4.5rem;
+  //}
 
 
   &__animation {
     -webkit-animation: moveInRight 2s ease-out;
   }
 }
+
+//@media screen and (min-width: 550px) {
+//  .heading-primary{
+//    font-size: 2.2rem;
+//
+//  }
+//}

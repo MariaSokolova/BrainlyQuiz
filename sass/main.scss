@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 @import "base/typography";
 @import "base/animations.scss";
 @import "base/base";
@@ -6,46 +7,7 @@
 @import "components/quiz_container";
 @import "components/progressbar";
 @import "components/hug";
-
-
-
-
-
-.site-header {
-  margin: auto;
-  height: auto;
-  width: content-box;
-  //padding-top: 2rem;
-}
-
-
-
-
-
-
-  .button-container {
-    display: flex;
-    justify-content: center;
-    /*
-    margin-top: 3rem;
-    */
-
-    visibility: hidden;
-
-  }
-
-  /*.sg-button-primary--next {
-    visibility: hidden;
-  }
-
-  .sg-button-primary--start {
-    margin-top: 2rem;
-  }
-
-  .sg-button-primary:hover {
-    background-color: $color-primary-dark;
-  }*/
-
+@import "components/header.scss";
 
 
 
